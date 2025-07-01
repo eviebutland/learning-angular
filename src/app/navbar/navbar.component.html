@@ -1,6 +1,6 @@
-<div>
+<div class="navbar">
   <div *ngFor="let item of items">
-    <a [href]="item">{{ item }}</a>
+    <a class="nav-link" [href]="item">{{ item }}</a>
   </div>
 
   <button (click)="addNewItem()">Add Item</button>
