@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { CounterService } from '../counter.service';
+import { CommonModule } from '@angular/common';
+import { CounterService } from '../count.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.sass',
 })

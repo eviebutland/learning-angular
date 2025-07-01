@@ -1,10 +1,12 @@
-<div *ngFor="let item of items">
-  <a [href]="item">{{ item }}</a>
+<div>
+  <div *ngFor="let item of items">
+    <a [href]="item">{{ item }}</a>
+  </div>
+
+  <button (click)="addNewItem()">Add Item</button>
+
+  <p *ngIf="items.length > 0">Items: {{ items }}</p>
+
+  <p>Count: {{ counter.count }}</p>
+  <button (click)="counter.increment()">Increment</button>
 </div>
-
-<button (click)="addNewItem()">Add Item</button>
-
-<p ngIf="items.length > 0">Items: {{ items }}</p>
-
-<p>Count: {{ counter.count }}</p>
-<button (click)="counter.increment()">Increment</button>
