@@ -20,5 +20,8 @@
   }
 
   <p>Count: {{ counter.count }}</p>
+
+  @if (isOpen){
   <button (click)="counter.increment()">Increment</button>
+  }
 </div>

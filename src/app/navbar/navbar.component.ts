@@ -10,8 +10,9 @@ import { CounterService } from '../count.service';
 })
 export class NavbarComponent {
   items = ['Home', 'About', 'Contact'];
+  isOpen = false
 
-  constructor(public counter: CounterService) {}
+  constructor(public counter: CounterService) { }
 
   addNewItem() {
     console.log('addNewItem');

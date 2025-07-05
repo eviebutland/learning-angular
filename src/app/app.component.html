@@ -7,10 +7,14 @@
     <div class="divider" role="separator" aria-label="Divider"></div>
 
     @if (isServerRunning) {
-    <app-navbar></app-navbar>
+    <app-navbar />
     } @else {
     <p>Server is not running</p>
     }
+    <div>
+      <p>Form:</p>
+      <appForm />
+    </div>
   </div>
 </main>
 
