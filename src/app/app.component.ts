@@ -6,8 +6,10 @@ import { NavbarComponent } from './navbar/navbar.component';
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass',
+  styleUrl: './app.component.scss',
 })
+
+// this is how you pass the props down
 export class AppComponent {
   title = 'learning-angular';
 }
