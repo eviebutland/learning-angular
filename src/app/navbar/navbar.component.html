@@ -3,6 +3,12 @@
     <a class="nav-link" [href]="item">{{ item }}</a>
   </div>
 
+  @for (item of items; track item){
+
+  <a class="nav-link" [href]="item">New loop: {{ item }}</a>
+
+  }
+
   <button (click)="addNewItem()">Add Item</button>
 
   <p *ngIf="items.length > 0">Items: {{ items }}</p>
