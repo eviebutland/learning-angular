@@ -2,10 +2,15 @@
   <div class="content">
     <div class="left-side">
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>Congratulations! Your app is running in {{ city }}</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
+
+    @if (isServerRunning) {
     <app-navbar></app-navbar>
+    } @else {
+    <p>Server is not running</p>
+    }
   </div>
 </main>
 

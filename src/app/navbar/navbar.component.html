@@ -7,6 +7,12 @@
 
   <p *ngIf="items.length > 0">Items: {{ items }}</p>
 
+  <!-- // this is the newer method for conditionals  -->
+  @if(items.length > 0) {
+  <p>Another Item list: {{ items }}</p>
+
+  }
+
   <p>Count: {{ counter.count }}</p>
   <button (click)="counter.increment()">Increment</button>
 </div>

@@ -12,4 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 // this is how you pass the props down
 export class AppComponent {
   title = 'learning-angular';
+  city = 'London'
+  isLoggedIn = true
+  isServerRunning = true
 }
