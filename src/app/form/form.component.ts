@@ -4,14 +4,15 @@ import { Component } from '@angular/core';
   selector: 'appForm', // can use camelCase
   imports: [],
   templateUrl: './form.component.html',
-  styleUrl: './form.component.sass'
+  styleUrl: './form.component.sass',
 })
+
+// TODO: build out form with reactive elements
 export class FormComponent {
-  message = ''
+  message = '';
 
   handleInputOnChange() {
-    console.log('input on change')
-    this.message = 'on mouse over!'
+    console.log('input on change');
+    this.message = 'on mouse over!';
   }
-
 }

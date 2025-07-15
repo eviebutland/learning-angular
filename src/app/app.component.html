@@ -4,6 +4,13 @@
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running in {{ city }}</p>
     </div>
+    <div>
+      <p>Count: {{ count() }}</p>
+      <button (click)="increment()">Increment</button>
+      <p>Double Count: {{ doubleCount() }}</p>
+      <input type="number" (input)="incrementChosenNumber($event)" />
+    </div>
+
     <div class="divider" role="separator" aria-label="Divider"></div>
 
     @if (isServerRunning) {
