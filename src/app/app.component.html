@@ -1,14 +1,10 @@
 <main class="main">
   <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running in {{ city }}</p>
-    </div>
     <div>
-      <p>Count: {{ count() }}</p>
-      <button (click)="increment()">Increment</button>
-      <p>Double Count: {{ doubleCount() }}</p>
-      <input type="number" (input)="incrementChosenNumber($event)" />
+      <p>Count: {{ counter.count() }}</p>
+      <button (click)="counter.increment()">Increment</button>
+      <p>Double Count: {{ counter.doubleCount() }}</p>
+      <input type="number" (input)="counter.incrementChosenNumber($event)" />
     </div>
 
     <div class="divider" role="separator" aria-label="Divider"></div>

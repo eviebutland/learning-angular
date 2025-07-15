@@ -1,6 +1,10 @@
 <div>
   <form>
-    <input type="text" (mouseover)="handleInputOnChange()" />
+    <input
+      [attr.data-testid]="'test-id'"
+      type="text"
+      (mouseover)="handleInputOnChange()"
+    />
     <button type="button" (click)="handleInputOnChange()">Click me</button>
     {{ message }}
   </form>

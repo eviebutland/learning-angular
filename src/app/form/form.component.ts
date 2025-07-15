@@ -8,6 +8,15 @@ import { Component } from '@angular/core';
 })
 
 // TODO: build out form with reactive elements
+// - reactive forms (better for scaling)
+// - template driven forms (more basic)
+// - form validation
+// - form submission
+// - Update data and send to server (or json file)
+// - form submission with template driven forms
+// - form submission with reactive forms and template driven forms
+// - form submission with reactive forms and template driven forms
+// - form submission with reactive forms and template driven forms
 export class FormComponent {
   message = '';
 

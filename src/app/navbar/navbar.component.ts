@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterService } from '../count.service';
 
@@ -10,9 +10,10 @@ import { CounterService } from '../count.service';
 })
 export class NavbarComponent {
   items = ['Home', 'About', 'Contact'];
-  isOpen = false
+  isOpen = false;
 
-  constructor(public counter: CounterService) { }
+  // dependency injection, a way to share state between components
+  counter = inject(CounterService);
 
   addNewItem() {
     console.log('addNewItem');

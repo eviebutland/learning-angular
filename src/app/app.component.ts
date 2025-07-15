@@ -1,7 +1,8 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormComponent } from './form/form.component';
+import { CounterService } from './count.service';
 
 @Component({
   selector: 'app-root',
@@ -16,18 +17,9 @@ export class AppComponent {
   isServerRunning = true;
   isActive = true;
 
-  // Use signals to create and manage state
-  count = signal(0);
-  doubleCount = computed(() => this.count() * 2);
+  // this is the old way to inject services
+  // constructor(public counter: CounterService) {}
 
-  increment = () => {
-    this.count.set(this.count() + 1);
-  };
-
-  incrementChosenNumber = (event: Event) => {
-    const target = event.target as HTMLInputElement;
-    const value = parseInt(target.value) || 0;
-    console.log('value', value);
-    this.count.set(value);
-  };
+  // this is the new way to inject services
+  counter = inject(CounterService);
 }
