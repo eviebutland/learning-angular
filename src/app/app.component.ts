@@ -10,6 +10,7 @@ import { CounterService } from './count.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
   title = 'learning-angular';
   city = 'London';
