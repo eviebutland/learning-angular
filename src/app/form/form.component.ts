@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 interface UserForm {
   name: FormControl<string | null>,
@@ -29,7 +29,7 @@ interface UserForm {
 
 
 export class FormComponent {
-  userForm = new FormControl<UserForm>({
+  userForm = new FormGroup<UserForm>({
     name: new FormControl(''),
     userName: new FormControl(''),
     city: new FormControl("London"),
