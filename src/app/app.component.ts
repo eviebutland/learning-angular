@@ -1,13 +1,12 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormComponent } from './form/form.component';
 import { CounterService } from './count.service';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, FormComponent, NgOptimizedImage],
+  imports: [RouterOutlet, NavbarComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

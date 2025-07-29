@@ -1,24 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CounterService } from '../count.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.sass',
+  styleUrl: './navbar.component.scss',
 })
+
 export class NavbarComponent {
   items = ['Home', 'About', 'Contact'];
-  isOpen = false;
-
-  // dependency injection, a way to share state between components
-  counter = inject(CounterService);
-
-  addNewItem() {
-    console.log('addNewItem');
-
-    // this doesn't cause a new render to show the items
-    this.items.push('New Item');
-  }
+  isOpen = false
 }

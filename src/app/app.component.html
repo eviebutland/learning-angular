@@ -1,33 +1,26 @@
-<main class="main">
-  <router-outlet />
-  <div class="content">
-    <div>
-      <p>Count: {{ counter.count() }}</p>
-      <button (click)="counter.increment()">Increment</button>
-      <p>Double Count: {{ counter.doubleCount() }}</p>
-      <input type="number" (input)="counter.incrementChosenNumber($event)" />
-    </div>
+<main>
+  <app-navbar />
+  <div class="main">
+    <div class="content">
+      <div>
+        <p>Count: {{ counter.count() }}</p>
+        <button (click)="counter.increment()">Increment</button>
+        <p>Double Count: {{ counter.doubleCount() }}</p>
+        <input type="number" (input)="counter.incrementChosenNumber($event)" />
+      </div>
 
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="image-container">
-      <img ngSrc="../assets/cotswolds.png" fill />
-    </div>
+      <div class="divider" role="separator" aria-label="Divider"></div>
+      <div class="image-container">
+        <img ngSrc="../assets/cotswolds.png" fill />
+      </div>
 
-    <h1>Deferable views</h1>
-    @defer (on viewport) {
-    <div>
-      <p>Form:</p>
-      <appForm />
+      <h1>Deferable views</h1>
+      @if (isServerRunning) {
+      <p>server is running</p>
+      } @else {
+      <p>Server is not running</p>
+      }
     </div>
-    } @placeholder {
-    <p>Future comments</p>
-    } @loading (minimum 2s) {
-    <p>Loading comments...</p>
-
-    } @if (isServerRunning) {
-    <app-navbar />
-    } @else {
-    <p>Server is not running</p>
-    }
+    <router-outlet />
   </div>
 </main>

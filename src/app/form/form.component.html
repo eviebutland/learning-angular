@@ -1,26 +1,39 @@
 <div>
   <form [formGroup]="userForm" (ngSubmit)="onUserFormSubmit()">
     <!-- <input [attr.data-testid]="'test-id'" type="text" /> -->
-    <label for="name">Name</label>
-    <input type="text" formControlName="name" />
+    <div class="input-container">
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" />
+    </div>
 
-    <label for="name">User name</label>
-    <input type="text" formControlName="userName" />
+    <div class="input-container">
+      <label for="name">User name</label>
+      <input type="text" formControlName="userName" />
+    </div>
 
-    <label for="name">City</label>
+    <div class="input-container">
+      <label for="name">City</label>
+      <input type="text" formControlName="city" />
+    </div>
 
-    <input type="text" formControlName="city" />
-    <label for="name">State</label>
+    <div class="input-container">
+      <label for="name">State</label>
 
-    <input type="text" formControlName="state" />
-    <div>
+      <input type="text" formControlName="state" />
+    </div>
+    <div class="input-container">
       <label for="name">Agree to terms?</label>
 
-      <input type="radio" formControlName="hasAgreed" value="true" />
-      <input type="radio" formControlName="hasAgreed" value="false" />
+      <div>
+        <input type="radio" formControlName="hasAgreed" value="true" />Yes
+        <input type="radio" formControlName="hasAgreed" value="false" />No
+      </div>
     </div>
-    <button type="button" (click)="handleInputOnChange()">Click me</button>
-    {{ message }}
+
+    <div>
+      <button type="button" (click)="handleInputOnChange()">Click me</button>
+      {{ message }}
+    </div>
     <button type="submit">Submit</button>
   </form>
 </div>

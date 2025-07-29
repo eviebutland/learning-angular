@@ -13,7 +13,7 @@ interface UserForm {
   selector: 'appForm',
   imports: [ReactiveFormsModule], // must import this to enable reactive forms
   templateUrl: './form.component.html',
-  styleUrl: './form.component.sass',
+  styleUrl: './form.component.scss',
 })
 
 // TODO: build out form with reactive elements
@@ -47,5 +47,6 @@ export class FormComponent {
 
   onUserFormSubmit() {
     console.log('form was submitted', this.userForm.value)
+    alert(this.userForm.value)
   }
 }
