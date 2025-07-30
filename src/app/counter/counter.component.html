@@ -1,7 +1,6 @@
 <div>
   <p>Count: {{ counter.count() }}</p>
-
-  @if (isOpen){
   <button (click)="counter.increment()">Increment</button>
-  }
+  <p>Double Count: {{ counter.doubleCount() }}</p>
+  <input type="number" (input)="counter.incrementChosenNumber($event)" />
 </div>

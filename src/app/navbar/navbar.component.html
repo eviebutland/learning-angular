@@ -1,13 +1,7 @@
 <div class="navbar">
-  <div *ngFor="let item of items">
-    <a class="nav-link" [href]="item">{{ item }}</a>
-  </div>
-
   @for (item of items; track item){
-
-  <a class="nav-link" routerLink="item">New loop: {{ item }}</a>
-
+  <a class="nav-link" [routerLink]="item"> {{ item }}</a>
   }
 
-  <p *ngIf="items.length > 0">Items: {{ items }}</p>
+  <!-- <p *ngIf="items.length > 0">Items: {{ items }}</p> -->
 </div>

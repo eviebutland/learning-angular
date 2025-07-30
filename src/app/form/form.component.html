@@ -36,4 +36,13 @@
     </div>
     <button type="submit">Submit</button>
   </form>
+
+  <div>
+    <p>Form content:</p>
+    <p>Name: {{ userForm.value.name }}</p>
+    <p>userName: {{ userForm.value.userName }}</p>
+    <p>City: {{ userForm.value.city }}</p>
+    <p>State: {{ userForm.value.state }}</p>
+    <p>Agreed to terms: {{ userForm.value.hasAgreed }}</p>
+  </div>
 </div>

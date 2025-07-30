@@ -1,25 +1,17 @@
 <main>
   <app-navbar />
   <div class="main">
+    <div class="image-container">
+      <img ngSrc="../assets/cotswolds.png" fill />
+    </div>
     <div class="content">
-      <div>
-        <p>Count: {{ counter.count() }}</p>
-        <button (click)="counter.increment()">Increment</button>
-        <p>Double Count: {{ counter.doubleCount() }}</p>
-        <input type="number" (input)="counter.incrementChosenNumber($event)" />
-      </div>
-
-      <div class="divider" role="separator" aria-label="Divider"></div>
-      <div class="image-container">
-        <img ngSrc="../assets/cotswolds.png" fill />
-      </div>
-
-      <h1>Deferable views</h1>
+      <h1>Cotswolds</h1>
+      <!-- <h1>Deferable views</h1>
       @if (isServerRunning) {
       <p>server is running</p>
       } @else {
       <p>Server is not running</p>
-      }
+      } -->
     </div>
     <router-outlet />
   </div>

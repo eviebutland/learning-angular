@@ -1,7 +1,6 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CounterService } from './count.service';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -14,13 +13,5 @@ import { NgOptimizedImage } from '@angular/common';
 export class AppComponent {
   title = 'learning-angular';
   city = 'London';
-  isLoggedIn = true;
   isServerRunning = true;
-  isActive = true;
-
-  // this is the old way to inject services
-  // constructor(public counter: CounterService) {}
-
-  // this is the new way to inject services
-  counter = inject(CounterService);
 }
