@@ -34,11 +34,12 @@
       <button type="button" (click)="handleInputOnChange()">Click me</button>
       {{ message }}
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
   </form>
 
   <div>
     <p>Form content:</p>
+    <p>Form is valid: {{ userForm.valid }}</p>
     <p>Name: {{ userForm.value.name }}</p>
     <p>userName: {{ userForm.value.userName }}</p>
     <p>City: {{ userForm.value.city }}</p>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 interface UserForm {
   name: FormControl<string | null>,
@@ -30,11 +30,11 @@ interface UserForm {
 
 export class FormComponent {
   userForm = new FormGroup<UserForm>({
-    name: new FormControl(''),
-    userName: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    userName: new FormControl('', [Validators.minLength(5), Validators.required]),
     city: new FormControl("London"),
     state: new FormControl(""),
-    hasAgreed: new FormControl(false)
+    hasAgreed: new FormControl(false, Validators.required)
   }); // with reactive forms, each change
 
   //  creates a new form control instance so we can keep track of changes
