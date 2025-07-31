@@ -1,6 +1,6 @@
 <div class="navbar">
   @for (item of items; track item){
-  <a class="nav-link" [routerLink]="item"> {{ item }}</a>
+  <a class="nav-link" [routerLink]="item"> {{ item | lowercase }}</a>
   }
 
   <!-- <p *ngIf="items.length > 0">Items: {{ items }}</p> -->

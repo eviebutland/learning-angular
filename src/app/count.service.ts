@@ -3,11 +3,12 @@ import { computed, Injectable, signal } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
+
 export class CounterService {
   count = signal(0);
   doubleCount = computed(() => this.count() * 2);
 
-  constructor() {}
+  constructor() { }
 
   increment = () => {
     this.count.set(this.count() + 1);
